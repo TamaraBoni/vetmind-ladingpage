@@ -1,24 +1,21 @@
 import { Button } from "@/components/ui/button"
+import logoUrl from "@/assets/logo_vetmind.png"
 
 const Header = () => {
   return (
-    <header className="bg-vetmind-navy text-white py-4 px-6">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center">
-          <div className="w-8 h-8 bg-vetmind-teal rounded mr-3"></div>
-          <span className="text-xl font-bold">VETMIND</span>
-        </div>
-        
-        <nav className="hidden md:flex space-x-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-vetmind-navy text-white shadow-md">
+      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
+        <a href="/" aria-label="Página inicial" className="flex items-center gap-3">
+          <img src={logoUrl} alt="VetMind" className="h-8 w-auto" />
+        </a>
+
+        <nav aria-label="primary" className="hidden md:flex items-center gap-8">
           <a href="#solucao" className="hover:text-vetmind-teal transition-colors">Nossa Solução</a>
           <a href="#quem-somos" className="hover:text-vetmind-teal transition-colors">Quem Somos</a>
           <a href="#contato" className="hover:text-vetmind-teal transition-colors">Contato</a>
         </nav>
-        
-        <Button 
-          variant="outline" 
-          className="border-white text-white hover:bg-white hover:text-vetmind-navy"
-        >
+
+        <Button variant="outline" className="hidden sm:inline-flex border-white text-black hover:bg-white hover:text-vetmind-navy hover:border-white">
           Entrar na lista de espera
         </Button>
       </div>

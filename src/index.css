@@ -8,6 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Base */
     --background: 0 0% 100%;
     --foreground: 213 27% 20%;
 
@@ -17,57 +18,54 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 213 27% 20%;
 
-    --primary: 213 46% 46%;
+    /* Primárias (azuis da VetMind) */
+    /* Azul (títulos/botões) e Navy (header/barra escura) */
+    --primary: 210 36% 45%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 191 60% 88%;
+    --ring: 210 36% 45%;
+
+    /* Secundárias / Acentos em teal */
+    --secondary: 184 66% 82%;
     --secondary-foreground: 213 46% 20%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 213 20% 60%;
-
-    --accent: 184 82% 67%;
+    --accent: 184 66% 62%;
     --accent-foreground: 213 46% 20%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Neutras (cinzas azulados suaves) */
+    --muted: 210 25% 95%;
+    --muted-foreground: 213 15% 55%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 213 46% 46%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
 
-    /* Medical VetMind Design System */
-    --vetmind-blue: 213 46% 46%;
-    --vetmind-blue-dark: 213 46% 35%;
-    --vetmind-teal: 184 82% 67%;
-    --vetmind-teal-light: 184 82% 85%;
-    --vetmind-gray: 213 20% 60%;
-    --vetmind-gray-light: 210 20% 95%;
-    --vetmind-navy: 213 60% 25%;
-    
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--vetmind-blue-dark)), hsl(var(--vetmind-blue)));
-    --gradient-section: linear-gradient(180deg, hsl(var(--vetmind-gray-light)), hsl(var(--background)));
+    /* Paleta VetMind (para usar com bg-vetmind-*) */
+    --vetmind-blue: 210 36% 45%;
+    --vetmind-blue-dark: 210 36% 35%;
+    --vetmind-teal: 184 66% 62%;
+    --vetmind-teal-light: 184 66% 82%;
+    --vetmind-gray: 213 15% 55%;
+    --vetmind-gray-light: 210 25% 95%;
+    --vetmind-navy: 214 46% 28%;
 
+    /* Gradientes */
+    --gradient-hero: linear-gradient(135deg,
+      hsl(var(--vetmind-blue-dark)),
+      hsl(var(--vetmind-blue))
+    );
+    /* faixa/sections com fundo azulado */
+    --gradient-section: linear-gradient(180deg,
+      hsl(var(--vetmind-navy)),
+      hwb(210 22% 53%)
+    );
+
+    /* Radius */
     --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
+  
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -104,15 +102,5 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
   }
 }
