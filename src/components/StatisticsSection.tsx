@@ -39,11 +39,11 @@ const StatisticsSection = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {statistics.map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="bg-vetmind-navy rounded-lg p-6 text-center border border-vetmind-blue/20 shadow-lg">
               <div className="flex justify-center mb-4 text-vetmind-teal">
                 {stat.icon}
               </div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">
+              <div className="text-3xl md:text-4xl font-bold mb-2 text-white">
                 {stat.percentage}
               </div>
               <p className="text-sm text-blue-100">
