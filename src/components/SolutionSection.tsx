@@ -75,7 +75,7 @@ export default function SolutionSection() {
       
       <div>
       <h3 className="text-[21px] leading-snug font-bold text-vetmind-blue">{f.title}</h3>
-      <p className="mt-2 text-[18px] leading-relaxed font-medium text-[hsl(var(--vetmind-gray))]">
+      <p className="mt-2 text-[18px] leading-relaxed font-medium text-justify text-[hsl(var(--vetmind-gray))]">
       {f.description}
       </p>
       </div>
