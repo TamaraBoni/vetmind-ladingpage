@@ -1,28 +1,51 @@
+// src/components/Footer.tsx
+import { Mail, Phone, MapPin } from "lucide-react"
+import vetmindLogo from "@/assets/logo_vetmind.png"
+
 const Footer = () => {
   return (
-    <footer className="bg-vetmind-navy text-white py-8" id="contato">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start">
-          <div className="mb-6 md:mb-0">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-vetmind-teal rounded mr-3"></div>
-              <span className="text-xl font-bold">VETMIND</span>
-            </div>
-            
-            <div className="space-y-2 text-sm">
-              <p>Contato:</p>
-              <p>vetmind@outlook.com</p>
-              <p>(11) 97965-4038</p>
-              <p>São Paulo, SP</p>
-            </div>
+    <footer id="contato" className="bg-[#1E232B] text-white">
+      {/* conteúdo principal */}
+      <div className="mx-auto max-w-6xl px-4 py-4">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          {/* Contato */}
+          <div>
+            <h3 className="text-xs font-semibold">Contato</h3>
+
+            <ul className="mt-2 space-y-2 text-sm text-white/85">
+              <li className="flex items-center gap-2">
+                <Mail size={16} className="text-white/70" />
+                <a href="mailto:vetmind@outlook.com" className="hover:text-white">
+                  vetmind@outlook.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone size={16} className="text-white/70" />
+                <a href="tel:+5511975626535" className="hover:text-white">
+                  (11) 97562-6535
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin size={16} className="text-white/70" />
+                São Paulo, SP
+              </li>
+            </ul>
           </div>
-          
-          <div className="text-sm text-blue-200">
-            <p>&copy; 2024 VetMind. Todos os direitos reservados.</p>
+
+          {/* Logo à direita */}
+          <div className="md:ml-auto">
+            <img
+              src={vetmindLogo}
+              alt="VetMind"
+              className="h-8 md:h-10 w-auto"
+            />
           </div>
         </div>
       </div>
-    </footer>
+
+      {/* linha divisória fina */}
+       <div className="border-t border-white/10" />
+        </footer>
   )
 }
 

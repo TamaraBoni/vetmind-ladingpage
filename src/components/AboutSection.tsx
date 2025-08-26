@@ -22,7 +22,7 @@ export default function AboutSection() {
           <div>
             <h2 className="text-3xl md:text-5xl font-extrabold">
               Quem Somos
-              <span className="block mt-2 h-1 w-40 rounded-full bg-white/40" />
+              <span className="block mt-2 h-1 w-80 rounded-full bg-white/40" />
             </h2>
 
             <div className="mt-12 space-y-7 text-justify text-base md:text-xl leading-relaxed">
