@@ -1,48 +1,66 @@
-import { UserCheck, Zap, Clock, FileText } from "lucide-react"
+// src/components/BenefitsSection.tsx
+// Imagens dos benefícios
+import imgConfianca from "@/assets/img-confianca.png"
+import imgOtimizacao from "@/assets/img-otimizacao.png"
+import imgTempo from "@/assets/img-economiatempo.png"
+import imgAcompanhamento from "@/assets/img-acompanhamento.png"
 
-const BenefitsSection = () => {
-  const benefits = [
-    {
-      icon: <UserCheck className="w-12 h-12 text-vetmind-blue mb-4" />,
-      title: "Mais confiança no diagnóstico",
-      description: "Tenha segurança nas suas decisões com nossa ferramenta de apoio ao diagnóstico baseada em evidências científicas."
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-vetmind-blue mb-4" />,
-      title: "Otimização do uso de antimicrobianos", 
-      description: "Prescreva antibióticos de forma mais precisa e eficaz, reduzindo resistência bacteriana."
-    },
-    {
-      icon: <Clock className="w-12 h-12 text-vetmind-blue mb-4" />,
-      title: "Economia de tempo na sua rotina",
-      description: "Agilize a interpretação de exames e foque no que realmente importa: o cuidado com seus pacientes."
-    },
-    {
-      icon: <FileText className="w-12 h-12 text-vetmind-blue mb-4" />,
-      title: "Melhor acompanhamento dos pacientes",
-      description: "Mantenha um histórico completo e organizado de todos os tratamentos e resultados."
-    }
-  ]
+type Benefit = {
+  img: string
+  alt: string
+  title: string
+}
 
+const benefits: Benefit[] = [
+  {
+    img: imgConfianca,
+    alt: "Mais confiança no diagnóstico",
+    title: "Mais confiança no diagnóstico",
+  },
+  {
+    img: imgOtimizacao,
+    alt: "Otimização do uso de antimicrobianos",
+    title: "Otimização do uso de antimicrobianos",
+  },
+  {
+    img: imgTempo,
+    alt: "Economia de tempo na sua rotina",
+    title: "Economia de tempo na sua rotina",
+  },
+  {
+    img: imgAcompanhamento,
+    alt: "Melhor acompanhamento dos pacientes",
+    title: "Melhor acompanhamento dos pacientes",
+  },
+]
+
+export default function BenefitsSection() {
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-vetmind-navy mb-12 underline">
-          Benefícios
-        </h2>
-        
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="text-center mb-20">
+          <h2 className="relative inline-block text-3xl md:text-5xl font-extrabold text-vetmind-blue">
+            Benefícios
+            <span className="block mx-auto mt-2 h-1 w-56 rounded-full bg-vetmind-teal" />
+          </h2>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-6">
-              <div className="flex justify-center">
-                {benefit.icon}
-              </div>
-              <h3 className="font-semibold text-vetmind-navy mb-3">
-                {benefit.title}
+          {benefits.map((b, i) => (
+            <div
+              key={i}
+              className="h-full rounded-2xl text-center flex flex-col items-center"
+            >
+              {/* imagem do benefício */}
+              <img
+                src={b.img}
+                alt={b.alt}
+                className="mb-4 h-20 w-20 md:h-72 md:w-72 object-contain"
+              />
+
+              <h3 className="text-[18px] md:text-[20px] font-semibold text-vetmind-blue mb-4">
+                {b.title}
               </h3>
-              <p className="text-vetmind-gray text-sm leading-relaxed">
-                {benefit.description}
-              </p>
             </div>
           ))}
         </div>
@@ -50,5 +68,3 @@ const BenefitsSection = () => {
     </section>
   )
 }
-
-export default BenefitsSection
