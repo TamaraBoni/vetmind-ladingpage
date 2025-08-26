@@ -19,13 +19,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # prepara o Pages (evita o 404 no deploy)
+      - uses: actions/configure-pages@v5
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "npm"
+
       - run: npm ci
       - run: npm run build
+
+      # SPA fallback para evitar 404 em rotas
       - run: cp dist/index.html dist/404.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
