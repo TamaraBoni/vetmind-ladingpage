@@ -44,7 +44,14 @@ const Footer = () => {
       </div>
 
       {/* linha divisória fina */}
-       <div className="border-t border-white/10" />
+      <div className="border-t border-white/10" />
+
+       {/* frase de direitos autorais */}
+      <div className="mx-auto max-w-6xl px-4 py-2">
+        <p className="text-[11px] md:text-xs text-center text-white/60">
+          &copy; {new Date().getFullYear()} VetMind. Todos os direitos reservados.
+        </p>
+      </div>
         </footer>
   )
 }
