@@ -1,7 +1,7 @@
 import heroImage from "@/assets/img_principal.png"
 
 const HeroSection = () => {
-  const offsetY = 0
+  const offsetY = -20
 
   return (
     <section className="relative h-[700px] overflow-hidden">
