@@ -56,7 +56,7 @@ export default function StatisticsSection() {
 
         {/* rodapé da seção */}
         <p className="text-xs text-white/80 text-center mt-12">
-          *Allegretti D. et al. (2025) Multidrug-resistant wound infections are associated with greater mortality, larger costs, and longer hospitalizations than susceptible infections in canine patients. JAVMA. 
+          *Allegretti D. et al. (2025) Multidrug-resistant wound infections are associated with greater mortality, larger costs, and longer hospitalizations than susceptible infections in canine patients. JAVMA.
         </p>
       </div>
     </section>
