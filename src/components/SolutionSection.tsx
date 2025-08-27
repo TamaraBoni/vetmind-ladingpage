@@ -113,7 +113,7 @@ export default function SolutionSection() {
                   asChild
                   className="w-full sm:w-72 bg-red-400 hover:bg-red-700 text-white text-lg font-semibold"
                 >
-                  <a href="https://forms.gle/SEU_FORM_AQUI" target="_blank" rel="noreferrer">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJn1GZ_Ot3LvFVxHeZwUnrM8q2NUJ2X3mnHfmW5N9X8mmzEg/viewform?usp=sharing&ouid=118399884714519279037" target="_blank" rel="noreferrer">
                     Entre na lista de espera
                   </a>
                 </Button>

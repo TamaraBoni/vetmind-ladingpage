@@ -16,6 +16,7 @@ const Header = () => {
         </nav>
 
         <Button variant="outline" className="hidden sm:inline-flex border-white text-black hover:bg-white hover:text-vetmind-navy hover:border-white">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJn1GZ_Ot3LvFVxHeZwUnrM8q2NUJ2X3mnHfmW5N9X8mmzEg/viewform?usp=sharing&ouid=118399884714519279037" target="_blank" rel="noreferrer"></a>
           Entrar na lista de espera
         </Button>
       </div>
